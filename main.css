@@ -1,0 +1,243 @@
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input {
+    margin: 0;
+    padding: 0;
+}
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: #4F5165;
+}
+
+aside {
+    padding: 2rem;
+    color: whitesmoke;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.boton-menu {
+    background-color: transparent;
+    border: 0;
+    color: whitesmoke;
+    font-size: .80rem;
+    cursor: pointer;
+}
+
+.texto-footer {
+    color: gray;
+    font-size: .85rem;
+}
+
+main {
+    background-color: whitesmoke;
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.titulo-principal{
+    color: blue;
+}
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.producto-imagen{
+    max-width: 100%;
+    border-radius: 1rem;
+    border-style: solid;
+}
+
+.producto-imagen-carro{
+    max-width: 110px;
+    border-radius: 1rem;
+    border-style: solid;
+}
+
+
+.modal-content.producto-imagen{
+    width: auto; /* Ancho fijo de 300px */
+    height: auto; /* Altura fija de 200px */
+    border-radius: 1rem;
+    
+}
+
+
+
+.producto-detalles{
+    background-color: #547AA5;
+    color: whitesmoke;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem
+    
+}
+
+
+.producto-detalles-carrito{
+    background-color: #547AA5;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    height: auto;
+    flex: 1;
+    margin: 10px
+}
+
+.producto-titulo {
+    font-size: 1rem;
+}
+
+.producto-agregar {
+    border: 0;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    color: blue;
+    padding: .5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Estilo para ocultar el modal por defecto */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto
+
+  }
+  
+  /* Estilo para el contenido del modal */
+  .modal-content {
+    background-color: #4F5165;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    max-width: 600px;
+    margin-right: inherit;
+    margin-top: inherit;
+    border-radius: 1rem; 
+    transform: translateX(100%); /* Posición inicial fuera de la pantalla */
+    animation: slideIn 0.5s forwards; /* Animación de desplazamiento */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Opacidad inicial del modal */
+    }
+    to {
+      opacity: 1; /* Opacidad final del modal */
+    }
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateX(0); /* Desplazamiento hacia la posición deseada */
+    }
+  
+  }
+  
+  /* Estilo para el botón de cerrar el modal */
+  .close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #000;
+  }
+  
+  /* CSS */
+.producto-carro {
+    display: flex;
+    align-items: center; /* Centrar verticalmente el contenido */
+    width: fit-content; 
+  }
+  
+  .producto-detalles-carrito {
+    margin-left: 1rem; /* Margen a la izquierda para separar del contenido de la imagen */
+  }
+  
+/* 
+  .carrito-acciones{
+
+  } */
+
+  .carrito-acciones-vaciar{
+    border: 0;
+    background-color: #547AA5;
+    border-radius: 1rem;
+    color: whitesmoke;
+    padding: .5rem;
+    text-transform: uppercase;
+    cursor: pointer; 
+  }
+
+  .boton-sumar-cantidad{
+    width: 30px;
+    border-radius: 1rem 0 0 1rem ;
+  }
+  
+  .boton-restar-cantidad{
+    width: 30px;
+    border-radius: 0 1rem 1rem 0 ;
+  }
+
+  .botonera{
+    text-align: center;
+    padding: 0px 25px 0px 25px;
+    gap: 5px;
+    display: inline-flex;
+  }
+
+
+  .carrito-producto-eliminar{
+    border: 0;
+    background-color:  whitesmoke;
+    border-radius: 1rem;
+    color: #547AA5;
+    padding: .5rem;
+    text-transform: uppercase;
+    cursor: pointer; 
+  }

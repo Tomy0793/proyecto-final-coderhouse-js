@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- CDN sweetalert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- CDN toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- CDN luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+    <!-- Animate CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="contenedor">
+        <aside>
+            <header class="logo">Guru del colchon</header>
+            <nav>
+                <ul>
+                    <li><button class="boton-menu boton-categoria active"><i class="bi bi-tag-fill"></i>Todos los productos</button></li>
+                    <li><button class="boton-menu boton-categoria"><i class="bi bi-tag-fill"></i>Colchones</button></li>
+                    <li><button class="boton-menu boton-categoria"><i class="bi bi-tag-fill"></i>Almohadas</button></li>
+                    <li><button class="boton-menu boton-categoria"><i class="bi bi-tag-fill"></i>Frazadas</button></li>
+                    <li><button class="boton-menu boton-carrito" id="openModalBtn"><i class="bi bi-cart4"></i>Carrito </button><span class="cantidad" id="cantidad-carro">0</span></li>
+                    
+                </ul>
+            </nav>
+            <footer class="texto-footer">Tomas ninno 2023</footer>
+        </aside>
+        <main>
+            <h2 class="titulo-principal">Todos los productos</h2>
+            <div class="contenedor-productos" id="contenedor-productos">
+                
+                <div id="myModal" class="modal">
+                    <title>Carrito</title>
+                    <div class="modal-content" id="carrito-general">
+                    <span class="close">&times;</span>
+                    <h2>Carrito</h2>
+                    <div id="carrito-contenedor">
+                            <!-- Contenido del carrito agregado en js -->
+                    </div>
+                    <div id="carrito-general">
+                        <div class="carrito-acciones">
+                            <button class="carrito-acciones-vaciar" id="vaciar-carro">Vaciar carrito <i class="bi bi-recycle"></i></button>
+                            <div class="acciones-carrito-total">
+                                <p>Total</p>
+                                <p id="total-carro">$0</p>
+                            </div>
+                            <button type="button" class="btn btn-primary carrito-acciones-vaciar" data-bs-toggle="modal" data-bs-target="#exampleModal" id="carrito-acciones-comprar ">Comprar Ahora</button>                
+                        </div>
+                    </div>
+                                            
+                    </div>
+                </div>
+                <!-- Modal para confirmar compra -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Proceso de compra</h1>
+                            
+                        </div>
+                    <div class="modal-body">
+                        <form id="form">
+                            <label for="nombre">Nombre y Apellido:</label><br>
+                            <input type="text" id="nombre" name="nombre" required><br><br>
+
+                            <label for="number">Telefono:</label><br>
+                            <input type="number" id="telefono" name="telefono" required><br><br>
+                            
+                            <label for="correo">Correo Electrónico:</label><br>
+                            <input type="email" id="correo" name="correo" required><br><br>
+                            
+                            <label for="nombre">Direccion de entrega:</label><br>
+                            <input type="text" id="direccion" name="direccion" required><br><br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary carrito-acciones-vaciar" data-bs-dismiss="modal">Volver</button>
+                        <input type="submit" id="button" class="btn btn-primary carrito-acciones-vaciar" value="Comprar" >
+                    </div>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        
+    </div>
+     
+    <script src="main.js"></script>
+    <script src="carrito.js"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('Jylkafak-YIXjACBX')
+</script>
+
+</body>
+</html>
+
+
